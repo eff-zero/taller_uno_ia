@@ -111,3 +111,10 @@ nFotos = int(input('Ingrese el numero de fotos a revelar: '))
 valorBruto = valorRevelado * nFotos
 valorConIva = valorBruto + (valorBruto*0.16)
 print(f'El valor con IVA del revelado de las fotos es ${valorConIva:,}')
+
+# 14.
+areas = {'Ginecologia': 0.40, 'Traumatologia': 0.30, 'Pediatria': 0.30}
+presupuesto = float(input('Ingrese el monto presupuestal: '))
+for area, porcentaje in areas.items():
+    pArea = presupuesto*porcentaje
+    print(f'Al area de {area} le corresponde ${pArea:,}')
