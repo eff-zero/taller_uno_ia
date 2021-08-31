@@ -73,4 +73,17 @@ print(f'Su sueldo final es ${sueldo - totalDescuento:,}')
 palabras = int(input('Ingrese el numero de palabras: '))
 centimetros = float(input('Ingrese los cm a utilizar: '))
 colores = int(input('Ingrese la cantidad de colores a utilizar: '))
+vPalabras = 20000*palabras
+vCentimetros = 15000*centimetros
+vColores = 25000*colores
+vTotal = vPalabras + vCentimetros + vColores
+print(f'El valor total para su aviso clasificado es ${vTotal:,}')
 
+# 10.
+years = int(input('Ingrese los años que lleva trabajando en la empresa: '))
+if years == 1:
+    print('Su bonificacion es de $100.000')
+elif years > 1:
+    print(f'Su bonificacion es de ${120000*years:,}')
+else:
+    print('Numero de años invalido')
