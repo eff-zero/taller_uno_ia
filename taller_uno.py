@@ -68,3 +68,9 @@ for tipoDescuento, valorDescuento in descuentos.items():
     print(f'El descuento en {tipoDescuento} es {iDescuento}')
     totalDescuento = totalDescuento + iDescuento
 print(f'Su sueldo final es ${sueldo - totalDescuento:,}')
+
+# 9.
+palabras = int(input('Ingrese el numero de palabras: '))
+centimetros = float(input('Ingrese los cm a utilizar: '))
+colores = int(input('Ingrese la cantidad de colores a utilizar: '))
+
