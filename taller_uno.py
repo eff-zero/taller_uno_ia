@@ -87,3 +87,20 @@ elif years > 1:
     print(f'Su bonificacion es de ${120000*years:,}')
 else:
     print('Numero de años invalido')
+
+# 11.
+pagos = {'hora': 20000, 'descuento': 0.05}
+nHoras = int(input('Ingrese el numero de horas trabajadas: '))
+pagoNeto = nHoras*pagos['hora']
+descuento = pagoNeto*pagos['descuento']
+pagoFinal = pagoNeto - descuento
+print(f'Descuento de Caja ${descuento:,}. Su pago final es de ${pagoFinal:,}')
+
+# 12.
+montoInicial = float(input('Ingrese su monto inicial: '))
+montoFinal = float(input('Ingrese su monto final: '))
+if montoFinal < montoInicial:
+    print('El monto final debe ser mayor al inicial')
+else:
+    costoLlamada = (montoFinal-montoInicial) / 1.20
+    print(f'El costo de la llamada es ${costoLlamada:,}')
