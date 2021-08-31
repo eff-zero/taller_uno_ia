@@ -95,3 +95,19 @@ pagoNeto = nHoras*pagos['hora']
 descuento = pagoNeto*pagos['descuento']
 pagoFinal = pagoNeto - descuento
 print(f'Descuento de Caja ${descuento:,}. Su pago final es de ${pagoFinal:,}')
+
+# 12.
+montoInicial = float(input('Ingrese su monto inicial: '))
+montoFinal = float(input('Ingrese su monto final: '))
+if montoFinal < montoInicial:
+    print('El monto final debe ser mayor al inicial')
+else:
+    costoLlamada = (montoFinal-montoInicial) / 1.20
+    print(f'El costo de la llamada es ${costoLlamada:,}')
+
+# 13.
+valorRevelado = 1500
+nFotos = int(input('Ingrese el numero de fotos a revelar: '))
+valorBruto = valorRevelado * nFotos
+valorConIva = valorBruto + (valorBruto*0.16)
+print(f'El valor con IVA del revelado de las fotos es ${valorConIva:,}')
