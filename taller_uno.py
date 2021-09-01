@@ -118,3 +118,5 @@ presupuesto = float(input('Ingrese el monto presupuestal: '))
 for area, porcentaje in areas.items():
     pArea = presupuesto*porcentaje
     print(f'Al area de {area} le corresponde ${pArea:,}')
+
+# 15.
