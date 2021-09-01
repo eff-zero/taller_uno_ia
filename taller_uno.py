@@ -52,11 +52,11 @@ print(f'El porcentaje correspondiente para la persona #3 es {pPersona3}%')
 # 7.
 saldoInicial = float(input('Ingrese su saldo: '))
 interes = (1.5)/100
-saldoFinal = (saldoInicial*interes) + saldoInicial
+saldoFinal = saldoInicial + (saldoInicial*interes)
 print(f'Su saldo final con interes es ${saldoFinal:,}')
 
 # 8.
-sueldo = float(input('Ingrese su sueldo neto: '))
+sueldo = float(input('Ingrese su sueldo inicial: '))
 totalDescuento = 0
 descuentos = {'Politica Publica': 0.01,
               'Seguro Social': 0.04,
@@ -67,24 +67,30 @@ for tipoDescuento, valorDescuento in descuentos.items():
     iDescuento = valorDescuento*sueldo
     print(f'El descuento en {tipoDescuento} es {iDescuento}')
     totalDescuento = totalDescuento + iDescuento
-print(f'Su sueldo final es ${sueldo - totalDescuento:,}')
+sueldoFinal = sueldo - totalDescuento
+print(f'Su sueldo final es ${sueldoFinal:,}')
 
 # 9.
 palabras = int(input('Ingrese el numero de palabras: '))
 centimetros = float(input('Ingrese los cm a utilizar: '))
 colores = int(input('Ingrese la cantidad de colores a utilizar: '))
-vPalabras = 20000*palabras
-vCentimetros = 15000*centimetros
-vColores = 25000*colores
+vPalabra = 20000
+vCentimetro = 15000
+vColor = 25000
+vPalabras = vPalabra*palabras
+vCentimetros = vCentimetro*centimetros
+vColores = vColor*colores
 vTotal = vPalabras + vCentimetros + vColores
 print(f'El valor total para su aviso clasificado es ${vTotal:,}')
 
 # 10.
 years = int(input('Ingrese los años que lleva trabajando en la empresa: '))
+oneYear = 100000
+moreYears = 120000
 if years == 1:
-    print('Su bonificacion es de $100.000')
+    print('Su bonificacion es de {oneYear:,}')
 elif years > 1:
-    print(f'Su bonificacion es de ${120000*years:,}')
+    print(f'Su bonificacion es de ${moreYears*years:,}')
 else:
     print('Numero de años invalido')
 
@@ -106,10 +112,10 @@ else:
     print(f'El costo de la llamada es ${costoLlamada:,}')
 
 # 13.
-valorRevelado = 1500
+vRevelado = 1500
 iva = 0.16
 nFotos = int(input('Ingrese el numero de fotos a revelar: '))
-valorBruto = valorRevelado * nFotos
+valorBruto = vRevelado * nFotos
 valorConIva = valorBruto + (valorBruto*iva)
 print(f'El valor con IVA del revelado de las fotos es ${valorConIva:,}')
 
@@ -117,20 +123,20 @@ print(f'El valor con IVA del revelado de las fotos es ${valorConIva:,}')
 areas = {'Ginecologia': 0.40, 'Traumatologia': 0.30, 'Pediatria': 0.30}
 presupuesto = float(input('Ingrese el monto presupuestal: '))
 for area, porcentaje in areas.items():
-    pArea = presupuesto*porcentaje
-    print(f'Al area de {area} le corresponde ${pArea:,}')
+    vArea = presupuesto*porcentaje
+    print(f'Al area de {area} le corresponde ${vArea:,}')
 
 # 15.
 vAlquiler = 1500
-tPeliculas = int(input('Ingrese la cantidad de peliculas a alquilar: '))
+cPeliculas = int(input('Ingrese la cantidad de peliculas a alquilar: '))
 nDias = int(input('Ingrese los dias que alquilara las peliculas: '))
-pUnaPelicula = nDias*vAlquiler
-pagoBruto = pUnaPelicula*nDias
-pagoDescuento = pagoBruto - pUnaPelicula
-if tPeliculas > 1:
+vUnaPelicula = nDias*vAlquiler
+pagoBruto = vUnaPelicula*nDias
+pagoDescuento = pagoBruto - vUnaPelicula
+if cPeliculas > 1:
     print(f'El monto a cancelar es ${pagoDescuento:,}')
-else:
-    print(f'El monto a cancelar es ${pUnaPelicula:,}')
+elif cPeliculas == 1:
+    print(f'El monto a cancelar es ${vUnaPelicula:,}')
 
 # 16.
 vTour = 25000
@@ -152,3 +158,12 @@ else:
     print('Numero de dias invalido')
 
 # 18.
+interes = 0.24
+prestamo = float(input('Ingrese el valor que desea prestar: '))
+cEspeciales = 4
+cOrdinarias = 20
+montoTotal = prestamo + (prestamo*interes)
+mitadMonto = montoTotal / 2
+print(f'El monto total a pagar es de ${montoTotal:,}')
+print(f'Las cuotas especiales quedan en {mitadMonto/cEspeciales:,}')
+print(f'Las cuotas ordianarias quedan en {mitadMonto/cOrdinarias:,}')
