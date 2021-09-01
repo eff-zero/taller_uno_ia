@@ -107,9 +107,10 @@ else:
 
 # 13.
 valorRevelado = 1500
+iva = 0.16
 nFotos = int(input('Ingrese el numero de fotos a revelar: '))
 valorBruto = valorRevelado * nFotos
-valorConIva = valorBruto + (valorBruto*0.16)
+valorConIva = valorBruto + (valorBruto*iva)
 print(f'El valor con IVA del revelado de las fotos es ${valorConIva:,}')
 
 # 14.
@@ -120,3 +121,20 @@ for area, porcentaje in areas.items():
     print(f'Al area de {area} le corresponde ${pArea:,}')
 
 # 15.
+vAlquiler = 1500
+tPeliculas = int(input('Ingrese la cantidad de peliculas a alquilar: '))
+nDias = int(input('Ingrese los dias que alquilara las peliculas: '))
+pUnaPelicula = nDias*vAlquiler
+pagoBruto = pUnaPelicula*nDias
+pagoDescuento = pagoBruto - pUnaPelicula
+if tPeliculas > 1:
+    print(f'El monto a cancelar es ${pagoDescuento:,}')
+else:
+    print(f'El monto a cancelar es ${pUnaPelicula:,}')
+
+# 16.
+vTour = 25000
+iva = 0.12
+nPersonas = int(input('Ingrese el numero de personas: '))
+valorBruto = vTour * nPersonas
+valorConIva = valorBruto + (valorBruto * iva)
